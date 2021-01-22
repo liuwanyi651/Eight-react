@@ -1,0 +1,33 @@
+
+.app-active{
+  color: red;
+}
+.app-box{
+  height: 20px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+/* .flexx {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  margin-left: 20px;
+  width: 300px;
+  background: greenyellow;
+}
+
+.right {
+  width: 55%;
+  background: rgb(131, 110, 58);
+  display: flex;
+  justify-content: space-around;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
