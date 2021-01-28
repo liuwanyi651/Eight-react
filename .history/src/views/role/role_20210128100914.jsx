@@ -8,7 +8,7 @@ const Role = (props) => {
     // console.log(props);
     let dispatch = useDispatch()
     // 拿到角色列表的数据 赋值给list
-    let list = useSelector(state => state.permission.setroles)
+    let roles = useSelector(state => state.permission.setroles)
     // 拿到权限管理 角色列表 分配权限tree 树状显示权限 赋值给treelist
     let treelist = useSelector(state => state.permission.setrightstree)
     console.log(treelist);

@@ -23,16 +23,7 @@ const Role = (props) => {
         // 获取树状 分配权限数据
         dispatch(getRightsTree())
     }, [])
-    // 删除和替换children属性 递归
-    let delChildren = (data)=>{
-        data.map(item=>{
-            item.child = item.children
-            if(item.children && item.children.length){
-                delChildren(item.children)
-            }
-            delete item.children
-        })
-    }
+    // 删除和替换chil
 
     const columns = [
         {

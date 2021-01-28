@@ -8,7 +8,7 @@ const Role = (props) => {
     // console.log(props);
     let dispatch = useDispatch()
     // 拿到角色列表的数据 赋值给list
-    let list = useSelector(state => state.permission.setroles)
+    let roles = useSelector(state => state.permission.setroles)
     // 拿到权限管理 角色列表 分配权限tree 树状显示权限 赋值给treelist
     let treelist = useSelector(state => state.permission.setrightstree)
     console.log(treelist);
@@ -80,7 +80,7 @@ const Role = (props) => {
             {/* 添加角色的按钮 */}
             <Button type="primary" style={{ width: 80, marginBottom: 10 }} >添加角色</Button>
             {/* Table表格 渲染数据  */}
-            <Table dataSource={list} columns={columns} childrenColumnName='children1' rowKey='id'
+            <Table dataSource={roles} columns={columns} childrenColumnName='children1' rowKey='id'
                 expandable={{
                     expandedRowRender: (record) => {
                         console.log(record);

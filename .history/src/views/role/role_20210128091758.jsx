@@ -23,16 +23,7 @@ const Role = (props) => {
         // 获取树状 分配权限数据
         dispatch(getRightsTree())
     }, [])
-    // 删除和替换children属性 递归
-    let delChildren = (data)=>{
-        data.map(item=>{
-            item.child = item.children
-            if(item.children && item.children.length){
-                delChildren(item.children)
-            }
-            delete item.children
-        })
-    }
+
 
     const columns = [
         {
@@ -101,7 +92,7 @@ const Role = (props) => {
                                             <div>
                                                 {item.children.map((item1) => {
                                                     return (
-                                                        <div className="flex bbs" key={item1.id}>
+                                                        <div className="flex bbs" key={item1.key}>
                                                             <div  className="m10 flex a-center ">
                                                                 <Tag color='#87d068' closable>
                                                                     {item1.authName}
@@ -113,7 +104,7 @@ const Role = (props) => {
                                                             <div className="ml50">
                                                                 {item1.children.map((item2) => {
                                                                     return (
-                                                                            <div key={item2.id} className="m10">
+                                                                            <div key={item2.key} className="m10">
                                                                                 <Tag color='#2db7f5' closable>
                                                                                     {item2.authName}
                                                                                 </Tag>

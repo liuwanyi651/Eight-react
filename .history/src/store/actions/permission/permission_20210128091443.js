@@ -29,10 +29,23 @@ export function getRoles() {
     return async (dispatch )=> {
         let res = await api.getRoles()
         if (res.meta.status === 200) {
-            //  delChildren(res.data) 
-            
-
-            console.log(res.data); 
+              
+            // res.data.map((item)=>{
+            //     item.key=item.id
+            //     item.children.map((item1,index1)=>{
+            //         if(item1.children.length){
+            //             item1.key=item1.id
+            //             item1.children.map((item2,index2)=>{
+            //                 item2.key =item2.id
+            //                 item2.children.map((item3)=>{
+            //                     item3.key =item3.id
+            //                 })
+            //             })
+            //         }
+            //         // JSON.parse(JSON.stringify(item).replace('children', 'children1'))
+            //     })
+            // })
+            // console.log(res.data); 
             message.success(res.meta.msg)
             // 提交reducers
             dispatch({

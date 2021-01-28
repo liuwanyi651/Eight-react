@@ -80,7 +80,7 @@ const Role = (props) => {
             {/* 添加角色的按钮 */}
             <Button type="primary" style={{ width: 80, marginBottom: 10 }} >添加角色</Button>
             {/* Table表格 渲染数据  */}
-            <Table dataSource={list} columns={columns} childrenColumnName='children1' rowKey='id'
+            <Table dataSource={roles} columns={columns} childrenColumnName='children1' rowKey='id'
                 expandable={{
                     expandedRowRender: (record) => {
                         console.log(record);
